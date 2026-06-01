@@ -1,64 +1,70 @@
-# AI Photo Prompts
+# Preferential CN AI Photo Prompts
 
-这是一个用于整理、复用和版本管理 AI 照片提示词的仓库模板。
+面向中国用户的 AI 照片提示词收藏。  
+Chinese-focused AI photo prompt collection.
 
-## 目录结构
+这个仓库的用法很简单：放一张示例照片，然后把对应提示词写在照片下面。
+
+## 示例 001：标题写这里
+
+把图片上传到 GitHub 后，在这里显示：
+
+```markdown
+![示例照片](图片链接或图片路径)
+```
+
+### 中文提示词
 
 ```text
-ai-photo-prompts/
-  prompts/
-    portrait/        人像写真
-    product/         产品图
-    food/            食物摄影
-    fashion/         服装与造型
-    scene/           场景氛围
-  templates/
-    prompt-template.md
-  references/
-    style-notes.md
+这里写中文提示词。
+例如：一位年轻女性穿着新中式服装，站在江南庭院中，柔和自然光，真实摄影质感，浅景深，画面干净，高级人像写真，细节清晰。
 ```
 
-## 推荐命名
-
-提示词文件建议使用：
+### English Prompt
 
 ```text
-类别-主题-风格.md
+Write the English prompt here.
+Example: A young woman wearing modern Chinese-style clothing, standing in a Jiangnan courtyard, soft natural light, realistic photography texture, shallow depth of field, clean composition, premium portrait photo, sharp details.
 ```
 
-示例：
+### 负面提示词
 
 ```text
-portrait-asian-girl-cinematic.md
-food-toast-clean-studio.md
-product-perfume-luxury-gold.md
+低清晰度，模糊，脸部变形，手指错误，多余手指，文字，水印，logo，过度磨皮
 ```
 
-## 每条提示词建议包含
+---
 
-- 适用模型：Midjourney、Stable Diffusion、DALL-E、即梦、可灵等
-- 中文提示词
-- 英文提示词
-- 负面提示词
-- 参数
-- 使用说明
-- 示例图路径或链接
+## 新增提示词的方法
 
-## GitHub 使用方式
+复制下面这一段，换成你的图片和提示词即可。
 
-1. 新建 GitHub 仓库，例如 `ai-photo-prompts`。
-2. 把本目录里的文件上传到仓库。
-3. 后续每新增一条提示词，就在 `prompts/` 下添加一个 `.md` 文件。
-4. 用 GitHub 的搜索功能按关键词查找提示词。
+```markdown
+## 示例 002：这里写标题
 
-## 本地上传命令
+![示例照片](图片链接或图片路径)
 
-```bash
-git init
-git add .
-git commit -m "Add AI photo prompt library"
-git branch -M main
-git remote add origin https://github.com/你的用户名/ai-photo-prompts.git
-git push -u origin main
+### 中文提示词
+
+```text
+这里写中文提示词。
 ```
 
+### English Prompt
+
+```text
+Write the English prompt here.
+```
+
+### 负面提示词
+
+```text
+低清晰度，模糊，脸部变形，手指错误，文字，水印，logo
+```
+```
+
+## 说明
+
+前面我拆了很多文件，是偏“资料库管理”的做法，适合几百条提示词以后按分类查找。
+
+但你现在这个需求更直接：图片在上面，提示词在下面。这个版本更适合展示和分享。
