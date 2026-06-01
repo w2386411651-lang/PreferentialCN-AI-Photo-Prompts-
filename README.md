@@ -3,55 +3,82 @@
 偏向中国用户的 AI 照片提示词收藏。  
 Chinese-focused AI photo prompt collection.
 
-这个仓库的用法很简单：放一张示例照片，然后把对应提示词写在照片下面。
+这个仓库的用法很简单：先展示原始照片，再展示精修后的效果图，最后把对应提示词放在图片下面，方便直接复制使用。
 
-## 示例 001：商务人像精修（陆抖爆火的商务头像）
-注意事项：
-1，要修改原始图片类的提示词最好使用 Gemini。
-实测后发现，Gemini 的 Nano-Bunana 模型对人物面部识别度较高，生成出来的图片具有更高的辨识度，效果更好
-2，人像类生图，喂给AI 3~10 张图片效果更佳，包括但不限于不同角度、不同表情、不同光线等等，如果素材有限，可以多抽卡试几次，以提高面部识别度
-### V1｜原图
-![修改前素材，示例1](image/001-business-portrait-beforeV1.png)
-### V2｜原图
-![修改前素材，示例2](image/001-business-portrait-beforeV2.png)
+## 示例 001：商务人像精修
 
+陆抖爆火的商务头像风格，把普通自拍改成高端商务形象照。
+
+### 注意事项
+
+1. 修改原始照片类的提示词，建议优先使用 Gemini。
+2. 实测 Gemini 的 Nano-Banana 模型对人物面部识别度较高，生成图片更容易保留本人特征。
+3. 人像类生图建议上传 3 到 10 张素材，包括不同角度、不同表情、不同光线的照片。素材有限时，可以多生成几次，提高面部识别度。
+
+### 原始素材 V1
+
+![原始素材 V1](images/001-business-portrait-beforeV1.png)
+
+### 原始素材 V2
+
+![原始素材 V2](images/001-business-portrait-beforeV2.jpg)
+
+### 精修效果图
+
+后续把生成后的图片放到 `images/` 文件夹，例如：
+
+```text
+images/001-business-portrait-v1-after.jpg
+images/001-business-portrait-v2-after.jpg
+```
+
+然后在这里添加：
 
 ```markdown
-### V1｜高端商务头像
-![示例照片](图片链接或图片路径)
+![精修效果 V1](images/001-business-portrait-v1-after.jpg)
+![精修效果 V2](images/001-business-portrait-v2-after.jpg)
 ```
 
 ### 中文提示词
 
 ```text
-中文提示词。
 将上传的人像转换为美式专业商务头像风格，同时保留人物原有的面部特征与身份辨识度。要求：半身肖像、蓝色纹理摄影棚背景、柔和自然的棚拍灯光、高分辨率清晰度、真实自然的肤色表现，以及干净优雅的画面构图。人物应穿着商务休闲衬衫，搭配简约精致的领带，整体设计现代、专业且具有高级感。
+
 表情应自然放松、自信亲和，眼神明亮有神，并带有真诚自然的微笑。面部保持清晰锐利对焦，背景略微虚化以增强空间层次感，整体效果精致、专业且具有高端商业摄影质感。
 ```
 
 ### English Prompt
 
 ```text
-Write the English prompt here.
-Example: A young woman wearing modern Chinese-style clothing, standing in a Jiangnan courtyard, soft natural light, realistic photography texture, shallow depth of field, clean composition, premium portrait photo, sharp details.
+Transform the uploaded portrait into an American-style professional business headshot while preserving the person's original facial features and identity. The image should be a half-body portrait with a blue textured studio background, soft natural studio lighting, high-resolution clarity, realistic skin tones, and a clean elegant composition. The person should wear a business-casual shirt with a simple refined tie, creating a modern, professional, and premium look.
+
+The expression should be relaxed, confident, approachable, and natural, with bright focused eyes and a sincere smile. Keep the face sharply in focus, slightly blur the background to create depth, and make the final result look polished, professional, and high-end commercial photography.
 ```
 
 ### 负面提示词
 
 ```text
-低清晰度，模糊，脸部变形，手指错误，多余手指，文字，水印，logo，过度磨皮
+低清晰度，模糊，脸部变形，五官变化过大，不像本人，皮肤过度磨皮，塑料质感，手指错误，多余手指，文字，水印，logo，过曝，欠曝
 ```
 
 ---
 
-## 新增提示词的方法
+## 新增一组图片的方法
 
-复制下面这一段，换成你的图片和提示词即可。
+1. 把原图放到 `images/` 文件夹。
+2. 把生成后的效果图也放到 `images/` 文件夹。
+3. 在 `README.md` 里按下面格式新增一组。
 
-```markdown
+````markdown
 ## 示例 002：这里写标题
 
-![示例照片](图片链接或图片路径)
+### 原始素材
+
+![原始素材](images/002-topic-original.jpg)
+
+### 精修效果
+
+![精修效果](images/002-topic-v1-after.jpg)
 
 ### 中文提示词
 
@@ -68,12 +95,6 @@ Write the English prompt here.
 ### 负面提示词
 
 ```text
-低清晰度，模糊，脸部变形，手指错误，文字，水印，logo
+低清晰度，模糊，脸部变形，不像本人，文字，水印，logo
 ```
-```
-
-## 说明
-
-前面我拆了很多文件，是偏“资料库管理”的做法，适合几百条提示词以后按分类查找。
-
-但你现在这个需求更直接：图片在上面，提示词在下面。这个版本更适合展示和分享。
+````
