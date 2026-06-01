@@ -15,13 +15,11 @@ Chinese-focused AI photo prompt collection.
 2. 实测 Gemini 的 Nano-Banana 模型对人物面部识别度较高，生成图片更容易保留本人特征。
 3. 人像类生图建议上传 3 到 10 张素材，包括不同角度、不同表情、不同光线的照片。素材有限时，可以多生成几次，提高面部识别度。
 
-### 原始素材 V1
+### 原始素材
 
-![原始素材 V1](images/001-business-portrait-beforeV1.png)
-
-### 原始素材 V2
-
-![原始素材 V2](images/001-business-portrait-beforeV2.jpg)
+| V1 | V2 |
+| --- | --- |
+| <img src="images/001-business-portrait-beforeV1.png" alt="原始素材 V1" width="320"> | <img src="images/001-business-portrait-beforeV2.jpg" alt="原始素材 V2" width="320"> |
 
 ### 精修效果图
 
@@ -35,8 +33,9 @@ images/001-business-portrait-v2-after.jpg
 然后在这里添加：
 
 ```markdown
-![精修效果 V1](images/001-business-portrait-v1-after.jpg)
-![精修效果 V2](images/001-business-portrait-v2-after.jpg)
+| V1 效果 | V2 效果 |
+| --- | --- |
+| <img src="images/001-business-portrait-v1-after.jpg" alt="精修效果 V1" width="320"> | <img src="images/001-business-portrait-v2-after.jpg" alt="精修效果 V2" width="320"> |
 ```
 
 ### 中文提示词
@@ -74,11 +73,11 @@ The expression should be relaxed, confident, approachable, and natural, with bri
 
 ### 原始素材
 
-![原始素材](images/002-topic-original.jpg)
+<img src="images/002-topic-original.jpg" alt="原始素材" width="320">
 
 ### 精修效果
 
-![精修效果](images/002-topic-v1-after.jpg)
+<img src="images/002-topic-v1-after.jpg" alt="精修效果" width="320">
 
 ### 中文提示词
 
@@ -98,3 +97,18 @@ Write the English prompt here.
 低清晰度，模糊，脸部变形，不像本人，文字，水印，logo
 ```
 ````
+
+## 图片显示尺寸建议
+
+GitHub Markdown 可以用 HTML 控制图片显示尺寸：
+
+```html
+<img src="images/图片名.jpg" alt="图片说明" width="320">
+```
+
+推荐宽度：
+
+- 单张大图：`width="360"`
+- 两张对比图并排：`width="320"`
+- 三张版本图并排：`width="240"`
+
