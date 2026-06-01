@@ -11,32 +11,21 @@ Chinese-focused AI photo prompt collection.
 
 ### 注意事项
 
-1. 修改原始照片类的提示词，建议优先使用 Gemini。
-2. 实测 Gemini 的 Nano-Banana 模型对人物面部识别度较高，生成图片更容易保留本人特征。
-3. 人像类生图建议上传 3 到 10 张素材，包括不同角度、不同表情、不同光线的照片。素材有限时，可以多生成几次，提高面部识别度。
+1. 修改原始照片类的提示词，建议优先使用 Gemini。实测 Gemini 的 Nano-Banana 模型对人物面部识别度较高，生成图片更容易保留本人特征。
+2. 人像类生图建议上传 3 到 10 张素材，包括不同角度、不同表情、不同光线的照片。素材有限时，可以多生成几次，提高面部识别度。
+3. 为了避免生成图尺寸参差不齐，建议在提示词里写清楚画幅和分辨率，例如：竖版 3:4、竖版 4:5、方形 1:1、横版 16:9、竖版 9:16。常用分辨率可以写 1024x1024、1080x1440、1080x1920。
 
 ### 原始素材
 
 | V1 | V2 |
 | --- | --- |
-| <img src="images/001-business-portrait-beforeV1.png" alt="原始素材 V1" width="320"> | <img src="images/001-business-portrait-beforeV2.jpg" alt="原始素材 V2" width="320"> |
+| <img src="images/001-business-portrait-beforeV1.png" alt="原始素材 V1" width="320"> | <img src="images/002-business-portrait-beforeV2.jpg" alt="原始素材 V2" width="320"> |
 
 ### 精修效果图
 
-后续把生成后的图片放到 `images/` 文件夹，例如：
-
-```text
-images/001-business-portrait-v1-after.jpg
-images/001-business-portrait-v2-after.jpg
-```
-
-然后在这里添加：
-
-```markdown
-| V1 效果 | V2 效果 |
+| ChatGPT 版本 | Gemini 版本 |
 | --- | --- |
-| <img src="images/001-business-portrait-v1-after.jpg" alt="精修效果 V1" width="320"> | <img src="images/001-business-portrait-v2-after.jpg" alt="精修效果 V2" width="320"> |
-```
+| <img src="images/001-business-portrait-after-ByChatGPT.jpg" alt="ChatGPT 精修效果" width="320"> | <img src="images/002-business-portrait-after-ByGemini.jpg" alt="Gemini 精修效果" width="320"> |
 
 ### 中文提示词
 
@@ -44,6 +33,9 @@ images/001-business-portrait-v2-after.jpg
 将上传的人像转换为美式专业商务头像风格，同时保留人物原有的面部特征与身份辨识度。要求：半身肖像、蓝色纹理摄影棚背景、柔和自然的棚拍灯光、高分辨率清晰度、真实自然的肤色表现，以及干净优雅的画面构图。人物应穿着商务休闲衬衫，搭配简约精致的领带，整体设计现代、专业且具有高级感。
 
 表情应自然放松、自信亲和，眼神明亮有神，并带有真诚自然的微笑。面部保持清晰锐利对焦，背景略微虚化以增强空间层次感，整体效果精致、专业且具有高端商业摄影质感。
+
+建议画幅：竖版 3:4 或 4:5。
+建议分辨率：不低于 1024x1365，或使用 1080x1440。
 ```
 
 ### English Prompt
@@ -52,6 +44,9 @@ images/001-business-portrait-v2-after.jpg
 Transform the uploaded portrait into an American-style professional business headshot while preserving the person's original facial features and identity. The image should be a half-body portrait with a blue textured studio background, soft natural studio lighting, high-resolution clarity, realistic skin tones, and a clean elegant composition. The person should wear a business-casual shirt with a simple refined tie, creating a modern, professional, and premium look.
 
 The expression should be relaxed, confident, approachable, and natural, with bright focused eyes and a sincere smile. Keep the face sharply in focus, slightly blur the background to create depth, and make the final result look polished, professional, and high-end commercial photography.
+
+Recommended aspect ratio: vertical 3:4 or 4:5.
+Recommended resolution: at least 1024x1365, or 1080x1440.
 ```
 
 ### 负面提示词
